@@ -1,0 +1,139 @@
+/* text : #eaeaea
+
+bg: #310a0b, #272727
+*/
+
+@font-face {
+  font-family: thewitcher;
+  src: url(../font/The-witcher.ttf);
+}
+
+body {
+  font-family: thewitcher;
+}
+
+.site-nav {
+  z-index: 20;
+}
+
+.site-header {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to right, #310a0b, #272727);
+  color: #eaeaea;
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../images/Witcher_Black-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  opacity: 1;
+  animation: slideUp 0.5s forwards;
+}
+
+.site-nav .nav-link {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.site-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(266, 207, 31, 0);
+  transform: scaleX(0);
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.site-nav .nav-link:hover::before {
+  background-color: rgba(266, 207, 31, 0.2);
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.site-header .header-title {
+  animation: clear 0.8s 0.4s forwards;
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+.site-header .header-subtitle {
+  animation: clear 1s 0.7s forwards;
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+.site-header .header-cue {
+  animation: clear 0.5s 1.5s forwards;
+  transform: translateY(2rem);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.site-header .header-cue-icon {
+  animation: slideDown 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
+  transform: translateY(-2rem);
+  opacity: 1;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(300px) scale(1.2);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes clear {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
