@@ -88,6 +88,8 @@ body {
 }
 
 .site-header .header-cue {
+  position: absolute;
+  bottom: 0;
   animation: clear 0.5s 1s forwards;
   transform: translateY(2rem);
   z-index: 10;
