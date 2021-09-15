@@ -6,6 +6,7 @@ $(function () {
   let navHeight = nav.scrollHeight;
 
   function moveHandler() {
+    let top = window.pageYOffset;
     let mainOnTop = gamesWitcher.getBoundingClientRect().top - navHeight;
 
     mainOnTop < 0
@@ -17,6 +18,8 @@ $(function () {
     currentCuePosition < 0
       ? headerCue.classList.add("d-none")
       : headerCue.classList.remove("d-none");
+
+    headerContent.style.transform = `translateY(-${top / 1}px)`;
 
     window.requestAnimationFrame(moveHandler);
   }
