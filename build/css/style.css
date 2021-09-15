@@ -8,12 +8,23 @@ bg: #310a0b, #272727
   src: url(../font/The-witcher.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: thewitcher;
 }
 
 .site-nav {
   z-index: 20;
+  animation: slideDown 1.25s;
+}
+
+.site-nav.in-body {
+  background: #310a0b;
+  animation: clear 1.25s forwards;
+  opacity: 0;
 }
 
 .site-header {
