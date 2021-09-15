@@ -1,4 +1,6 @@
 $(function () {
+  let headerContent = document.querySelector(".header-content");
+  let headerCue = document.querySelector(".header-cue");
   let nav = document.querySelector(".site-nav");
   let gamesWitcher = document.querySelector("#games");
   let navHeight = nav.scrollHeight;
@@ -9,6 +11,12 @@ $(function () {
     mainOnTop < 0
       ? nav.classList.add("in-body")
       : nav.classList.remove("in-body");
+
+    let currentCuePosition = headerContent.getBoundingClientRect().top;
+
+    currentCuePosition < 0
+      ? headerCue.classList.add("d-none")
+      : headerCue.classList.remove("d-none");
 
     window.requestAnimationFrame(moveHandler);
   }

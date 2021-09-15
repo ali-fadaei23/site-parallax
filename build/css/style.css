@@ -88,14 +88,14 @@ body {
 }
 
 .site-header .header-cue {
-  animation: clear 0.5s 1.5s forwards;
+  animation: clear 0.5s 1s forwards;
   transform: translateY(2rem);
   z-index: 10;
   overflow: hidden;
 }
 
 .site-header .header-cue-icon {
-  animation: slideDown 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
+  animation: slideDown 0.5s 1.4s forwards, pulse 2s 4s ease-in-out infinite;
   transform: translateY(-2rem);
   opacity: 1;
 }
