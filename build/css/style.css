@@ -102,6 +102,11 @@ body {
   opacity: 1;
 }
 
+.site-header .anim {
+  animation: fade 1s 4s forwards;
+  opacity: 1;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(300px) scale(1.2);
@@ -148,5 +153,12 @@ body {
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+@keyframes fade {
+  to {
+    transform: none;
+    opacity: 0;
   }
 }
