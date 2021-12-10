@@ -3,8 +3,12 @@ $(function () {
   let headerCue = document.querySelector(".header-cue");
   let nav = document.querySelector(".site-nav");
   let gamesWitcher = document.querySelector("#games");
-  let witcher = document.querySelector("#witcher-2");
+  let witcherCoverScroll = document.querySelectorAll("#witcher-group .witcher");
   let navHeight = nav.scrollHeight;
+
+  witcherCoverScroll.forEach(
+    (item) => (item.style.animationDelay = `${Math.random() * 1 + 0.4}s`)
+  );
 
   function inViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -19,8 +23,6 @@ $(function () {
     let top = window.pageYOffset;
     let mainOnTop = gamesWitcher.getBoundingClientRect().top - navHeight;
 
-    console.log(inViewport(witcher));
-
     mainOnTop < 0
       ? nav.classList.add("in-body")
       : nav.classList.remove("in-body");
@@ -34,6 +36,12 @@ $(function () {
     headerContent.style.transform = `translateY(-${top / 2}px)`;
     headerContent.style.opacity =
       1 - Math.max(top / (window.innerHeight * 0.2), 0);
+
+    witcherCoverScroll.forEach((item) =>
+      inViewport(item)
+        ? item.classList.add("appear")
+        : item.classList.remove("appear")
+    );
 
     window.requestAnimationFrame(moveHandler);
   }

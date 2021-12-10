@@ -25,6 +25,7 @@ body {
   background: #310a0b;
   animation: clear 1.25s forwards;
   opacity: 0;
+  border-bottom: 1px solid #5B5147;
 }
 
 .site-header {
@@ -53,6 +54,7 @@ body {
 .site-nav .nav-link {
   position: relative;
   padding-bottom: 2px;
+  
 }
 
 .site-nav .nav-link::before {
@@ -107,7 +109,25 @@ body {
   opacity: 1;
 }
 
-@keyframes slideUp {
+.appear {
+  animation: clear 1s 0.5s forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.bg-section {
+  background-image: linear-gradient(
+      to top,
+      rgba(126, 47, 28, 0.52),
+      rgba(36, 41, 23, 0.73)
+    ),
+    url(../images/bg-the-witcher.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+background: @keyframes slideUp {
   from {
     transform: translateY(300px) scale(1.2);
     opacity: 0;
