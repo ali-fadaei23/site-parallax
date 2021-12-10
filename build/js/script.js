@@ -47,4 +47,10 @@ $(function () {
   }
 
   window.requestAnimationFrame(moveHandler);
+
+  let controller = new ScrollMagic.Controller();
+
+  new ScrollMagic.Scene({ triggerElement: "#medal" })
+    .setClassToggle(".medal-text", "appear")
+    .addTo(controller);
 });
