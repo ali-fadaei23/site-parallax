@@ -49,8 +49,20 @@ $(function () {
   window.requestAnimationFrame(moveHandler);
 
   let controller = new ScrollMagic.Controller();
+  let medalTextTween = TweenMax.from(".medal-text", {
+    y: 400,
+    opacity: 0,
+  });
 
-  new ScrollMagic.Scene({ triggerElement: "#medal" })
-    .setClassToggle(".medal-text", "appear")
+  new ScrollMagic.Scene({
+    triggerElement: "#medal",
+    duration: "100%",
+    triggerHook: 0,
+  })
+    .setTween(medalTextTween)
+    .setPin("#medal", {
+      pushFollowers: false,
+    })
+    .addIndicators({ name: "MEDAL" })
     .addTo(controller);
 });
