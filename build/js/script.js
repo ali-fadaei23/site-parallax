@@ -48,6 +48,8 @@ $(function () {
 
   window.requestAnimationFrame(moveHandler);
 
+  // Medal Section
+
   let controller = new ScrollMagic.Controller();
   let medalTextTween = TweenMax.from(".medal-text", {
     y: 400,
@@ -60,9 +62,35 @@ $(function () {
     triggerHook: 0,
   })
     .setTween(medalTextTween)
-    .setPin("#medal", {
-      pushFollowers: false,
+    .setPin("#medal")
+    .addIndicators({ name: "MedalSection" })
+    .addTo(controller);
+
+  // Medal icn
+
+  let medalTween = new TimelineMax();
+
+  medalTween
+    .from("#medal-witcher", {
+      scale: 0.5,
+      opacity: 0,
+      rotation: -40,
+      x: "100%",
+      y: "-200%",
     })
-    .addIndicators({ name: "MEDAL" })
+    .to("#medal-witcher", {
+      rotation: 40,
+      opacity: 0,
+      x: "-100%",
+      y: "100%",
+    });
+
+  let medalScene = new ScrollMagic.Scene({
+    triggerElement: "#medal",
+    duration: "200%",
+    triggerHook: 0,
+  })
+    .setTween(medalTween)
+    .addIndicators({ name: "Medal" })
     .addTo(controller);
 });
