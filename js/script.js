@@ -63,8 +63,7 @@ $(function () {
   })
     .setTween(medalTextTween)
     .setPin("#medal")
-    .addIndicators({ name: "MedalSection" })
-    .addTo(controller);
+    .addIndicators({ name: "MedalSection" });
 
   // Medal icn
 
@@ -91,6 +90,5 @@ $(function () {
     triggerHook: 0,
   })
     .setTween(medalTween)
-    .addIndicators({ name: "Medal" })
-    .addTo(controller);
+    .addIndicators({ name: "Medal" });
 });
