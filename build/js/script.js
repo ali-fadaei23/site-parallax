@@ -12,6 +12,8 @@ $(function () {
 
   function inViewport(el) {
     const rect = el.getBoundingClientRect();
+    console.log(rect.top)
+
     return (
       (rect.top <= 0 && rect.bottom >= 0) ||
       (rect.bottom >= window.innerHeight && rect.top <= window.innerHeight) ||
@@ -63,7 +65,6 @@ $(function () {
   })
     .setTween(medalTextTween)
     .setPin("#medal")
-    .addIndicators({ name: "MedalSection" })
     .addTo(controller);
 
   // Medal icn
@@ -91,6 +92,5 @@ $(function () {
     triggerHook: 0,
   })
     .setTween(medalTween)
-    .addIndicators({ name: "Medal" })
     .addTo(controller);
 });
