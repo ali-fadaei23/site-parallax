@@ -112,7 +112,7 @@ body {
   animation: clear 1s 0.5s forwards;
   opacity: 0;
   transform: scale(0.9);
-  transform-origin: top center
+  transform-origin: top center;
 }
 
 .bg-section {
@@ -125,6 +125,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#footer {
+  background: linear-gradient(to right, #310a0b, #272727);
+  
 }
 
 #medal {
