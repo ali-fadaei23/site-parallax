@@ -125,11 +125,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 40px;
 }
 
 #footer {
   background: linear-gradient(to right, #310a0b, #272727);
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .footer-link {

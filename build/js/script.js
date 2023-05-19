@@ -12,7 +12,7 @@ $(function () {
 
   function inViewport(el) {
     const rect = el.getBoundingClientRect();
-    console.log(rect.top)
+
 
     return (
       (rect.top <= 0 && rect.bottom >= 0) ||
