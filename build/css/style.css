@@ -129,8 +129,22 @@ body {
 
 #footer {
   background: linear-gradient(to right, #310a0b, #272727);
-  
+  font-size: xx-large;
 }
+
+.footer-link {
+  display: block;
+  color: #eaeaea;
+}
+
+
+
+.footer-link .footer-item:hover {
+  color: #5b5147;
+  text-decoration: none;
+}
+
+
 
 #medal {
   z-index: 100;

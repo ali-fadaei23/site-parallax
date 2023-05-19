@@ -83,7 +83,7 @@ $(function () {
       rotation: 40,
       opacity: 0,
       x: "-100%",
-      y: "100%",
+      y: "220%",
     });
 
   let medalScene = new ScrollMagic.Scene({
