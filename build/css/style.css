@@ -8,6 +8,16 @@ bg: #310a0b, #272727
   src: url(../font/The-witcher.ttf);
 }
 
+a {
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -136,6 +146,10 @@ body {
 .footer-link {
   display: block;
   color: #eaeaea;
+}
+
+.icon {
+  padding: 0 0.5rem;
 }
 
 
