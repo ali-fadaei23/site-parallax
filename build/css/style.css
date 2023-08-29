@@ -1,11 +1,24 @@
-/* text : #eaeaea
-
-bg: #310a0b, #272727
-*/
-
 @font-face {
   font-family: thewitcher;
   src: url(../font/The-witcher.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: thewitcher;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.site-nav {
+  z-index: 200;
+  animation: slideDown 1.25s;
 }
 
 a {
@@ -18,25 +31,27 @@ a:hover {
   color: #eaeaea;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: thewitcher;
-}
-
-.site-nav {
-  z-index: 200;
-  animation: slideDown 1.25s;
-}
-
 .site-nav.in-body {
   background: #310a0b;
   animation: clear 1.25s forwards;
   opacity: 0;
   border-bottom: 1px solid #5b5147;
 }
+
+/* @media only screen and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 600px) {
+} */
+
+/* 
+@media only screen and (min-width: 768px) {...}
+
+
+@media only screen and (min-width: 992px) {...}
+
+
+@media only screen and (min-width: 1200px) {...} */
 
 .site-header {
   position: relative;
@@ -152,14 +167,10 @@ body {
   padding: 0 0.5rem;
 }
 
-
-
 .footer-link .footer-item:hover {
   color: #5b5147;
   text-decoration: none;
 }
-
-
 
 #medal {
   z-index: 100;
